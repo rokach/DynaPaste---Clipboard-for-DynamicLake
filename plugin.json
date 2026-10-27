@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "identifier": "com.dynamiclake.plugins.dynapaste",
+  "name": "DynaPaste",
+  "version": "1.0.0",
+  "developerName": "DynamicLake",
+  "description": "Clipboard history in a full lake. Copy anything and open DynaPaste from the notch to copy it again, paste it, pin it, or delete it. Text, links, images, and files are kept.",
+  "executable": "dynapaste",
+  "icon": "DynaPasteIcon.png",
+  "arguments": [],
+  "autoStart": true,
+  "lake": {
+    "size": "big",
+    "glance": {
+      "systemImage": "doc.on.clipboard"
+    }
+  },
+  "settings": [
+    {
+      "id": "historyLimit",
+      "type": "slider",
+      "title": "History Size",
+      "description": "How many items to keep. Pinned items don't count.",
+      "systemImage": "clock.arrow.circlepath",
+      "tint": "blue",
+      "min": 10,
+      "max": 200,
+      "step": 10,
+      "suffix": "items",
+      "default": 50
+    },
+    {
+      "id": "saveImages",
+      "type": "switch",
+      "title": "Keep Images",
+      "description": "Save copied images to the history.",
+      "systemImage": "photo",
+      "tint": "purple",
+      "default": true
+    },
+    {
+      "id": "ignoreConcealed",
+      "type": "switch",
+      "title": "Ignore Passwords",
+      "description": "Skip copies that password managers mark as private.",
+      "systemImage": "lock.fill",
+      "tint": "green",
+      "default": true
+    },
+    {
+      "id": "showCopiedActivity",
+      "type": "switch",
+      "title": "Show Copies in the Notch",
+      "description": "Briefly show what you copied as a live activity.",
+      "systemImage": "doc.on.clipboard",
+      "tint": "cyan",
+      "default": true
+    }
+  ]
+}
